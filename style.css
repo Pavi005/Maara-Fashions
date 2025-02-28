@@ -1,0 +1,452 @@
+body {
+    width: 100%;
+    font-family: "Kaisei Tokumin", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agraham';
+    src: url('fonts/Backstreet.woff2') format('woff2'),
+        url('fonts/Backstreet.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('fonts/JosefinSans-Regular.woff2') format('woff2'),
+         url('fonts/JosefinSans-Regular.woff') format('woff'),
+         url('fonts/JosefinSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Orbitron-Bold';
+    src: url('fonts/Orbitron-Bold.ttf') format('truetype');
+}
+.million-rating {
+    font-family: 'Orbitron-Bold', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+@font-face {
+    font-family: 'Sixtyfour-Regular';
+    src: url('fonts/Sixtyfour-Regular.ttf') format('truetype');
+}
+.happyCus {
+    font-family: 'Sixtyfour-Regular', sans-serif;
+}
+.banner-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+
+}
+@font-face {
+    font-family: 'Monoton';
+    src: url('path/to/Monoton-Regular.woff2') format('woff2'),
+         url('path/to/Monoton-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EagleHorizonP';
+    src: url('fonts/EagleHorizonP.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BungeeShade';
+    src: url('fonts/BungeeShade-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.nova-mono-regular {
+    font-family: "Nova Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.shopCollection{
+    mix-blend-mode:hard-light;
+}
+.heading {
+    font-family: 'Audiowide', cursive;
+}
+:root {
+    --my-custom-primary: #FF5733; /* Custom color */
+}
+
+#custom-link {
+    background-color: var(--my-custom-primary);
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding to make it look like a button */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+#custom-link:hover {
+    background-color: rgba(var(--my-custom-primary), 10%); /* Darken color on hover */
+    color: black;
+}
+.nav-text{
+    color: black !important;
+}
+.nav-text:hover{
+    color: #8B4513 !important;
+}
+.border-bottom-style{
+    display: inline-block;
+    
+    text-decoration:none;
+}
+.border-bottom-style::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #8B4513;
+    transition: width .3s;
+}
+.border-bottom-style:hover::after {
+    width: 100%;
+    
+    /* transition: width .3s; */
+}
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .banner-text {
+        font-size: 1.2rem;
+    }
+}
+
+/* Show dropdown menu on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hide the dropdown menu initially */
+.nav-item.dropdown .dropdown-menu {
+    display: none;
+}
+
+/* Optional: Add a little delay before showing the dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+.bottom-sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Adjust as needed */
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+.footerHeadingFonts {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.bglight {
+    background-color: #F2EFE7;
+}
+.textsizeh5 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.addToCartNotification, .addToWishlistNotification {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: 40px; /* Ensuring fixed height */
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2000;
+
+    /* Prevent layout shift during fade-out */
+    will-change: opacity, transform;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#wishlist-notification {
+    background-color:blueviolet;
+}
+.hoverShowItems {
+    display: none;
+    z-index: 2000;
+}
+
+.nav-link-container {
+    position: relative;
+    display: inline-block;
+    color: black;
+}
+
+.showItems {
+    display: none;
+    position: absolute;
+    width: 400px;
+    text-wrap: wrap;
+    min-height: 200px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px black;
+    top: 40px;
+    right: 0;
+    z-index: 2000;
+    padding: 10px;
+}
+
+.nav-link-container:hover .showItems {
+    display: block;
+}
+
+.cart-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.total-amount-container {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.cart-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.cart-btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-btn:hover {
+    background-color: #0056b3;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-btn {
+    padding: 2px 6px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+
+.btnAnimation{
+    overflow-x: hidden;
+}
+.btnAnimation2 {
+    width: 40px;
+    overflow: hidden;
+    background-color: transparent; /* Default background color */
+    animation: revertAnimation 1s ease-in-out; /* Animation for reverting */
+}
+
+.btnAnimation2:hover {
+    animation: expandAnimation 1s ease-in-out forwards; /* Animation for expanding */
+}
+
+@keyframes expandAnimation {
+    from {
+        width: 40px;
+        background-color: transparent;
+    }
+    to {
+        width: 1800px;
+        background-color: black;
+    }
+}
+
+@keyframes revertAnimation {
+    from {
+        width: 1800px;
+        background-color: black;
+    }
+    to {
+        width: 40px;
+        background-color: transparent;
+    }
+}
+
+.button-container{
+    display: block;
+    background-color:white;
+    transition: margin-top 0.5s ease-in-out;
+}
+.button-container:hover{
+    
+    margin-top: -50px;
+    
+}
+@media (max-width: 576px) { /* For mobile screens */
+    .card-height {
+        min-height: 620px; /* Adjust this value if needed */
+    }
+    .btnAnimation2 {
+        width: 40px;
+        overflow: hidden;
+        background-color: transparent; /* Default background color */
+        animation: revertAnimation 1s ease-in-out; /* Animation for reverting */
+    }
+    
+    .btnAnimation2:hover {
+        animation: expandAnimation 1s ease-in-out forwards; /* Animation for expanding */
+    }
+    
+    @keyframes expandAnimation {
+        from {
+            width: 40px;
+            background-color: transparent;
+        }
+        to {
+            width: 2100px;
+            background-color: black;
+        }
+    }
+    
+    @keyframes revertAnimation {
+        from {
+            width: 1800px;
+            background-color: black;
+        }
+        to {
+            width: 40px;
+            background-color: transparent;
+        }
+    }
+    
+}
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-40px); }
+    100% { transform: translateY(0px); }
+}
+
+.turnShoe {
+    display: block;
+    place-items: center;
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center;
+    animation: floating 3s infinite ease-in-out;
+}
+
+.turnShoe:hover {
+    transform: scale(1.5) rotate(10deg);
+}
+
+.shoeFont {
+    font-family: "Goldman", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 0.01;
+  }
+
+.shoeFont1 {
+    font-family: "Julius Sans One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 1s ease-out,transform 1s ease-out;
+}
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition:opacity 1s ease-out,transform 1s ease-out;
+}
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out,transform 1s ease-out;
+}
+.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.back-ground{
+    background-image: url("Images/loginLogo.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+@media (max-width: 576px) {
+    .responsive-text {
+        font-size: 10px; /* Small devices */
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .responsive-text {
+        font-size: 12px; /* Medium devices */
+    }
+}
+@media (min-width: 769px) {
+    .responsive-text {
+        font-size: 14px; /* Large devices */
+    }
+}
+.carouselKids {
+ display: flex;   
+}
+.bg-dull {
+    background-color: rgba(0, 0, 0, 0.233);
+    position: absolute;
+}
+
