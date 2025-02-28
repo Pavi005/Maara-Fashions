@@ -45,11 +45,8 @@ body {
 
 }
 @font-face {
-    font-family: 'Monoton';
-    src: url('fonts/Monoton-Regular.woff2') format('woff2'),
-         url('fonts/Monoton-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Monoton"; /* You can choose any name here */
+    src: url("fonts/Monoton-Regular.ttf") format("truetype");
 }
 @font-face {
     font-family: 'EagleHorizonP';
